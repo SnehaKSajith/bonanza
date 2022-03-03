@@ -1,0 +1,46 @@
+{% extends 'usermaster.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper">
+  <nav class="sidebar">
+      <div class="sidebar-header">
+          <h3>HELLO</h3>
+          <hr>
+      </div>
+      <ul class="list-unstyled components">
+          <p>MY ORDERS</p>
+          <li> <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">MY PROFILE</a>
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                  <li> <a href="#">Profile Information</a> </li>
+                  <li> <a href="#">Manage Address</a> </li>
+                  <li> <a href="#">PAN Card Information</a> </li>
+              </ul>
+          </li>
+          <li> <a href="#">MY CHATS</a> </li>
+          <li> <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">PAYMENTS</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li> <a href="#">Gift Cards</a> </li>
+                  <li> <a href="#">Saved UPI</a> </li>
+                  <li> <a href="#">Saved Cards</a> </li>
+              </ul>
+          </li>
+          <li> <a href="#">Wishlist</a> </li>
+          <li> <a href="#">Notifications</a> </li>
+          <li> <a href="#">My Reviews and Ratings</a> </li>
+      </ul>
+      <ul class="list-unstyled CTAs">
+          <li> <a href="#" class="download">LOGOUT</a> </li>
+      </ul>
+  </nav>
+  <div class="content">
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+$("#sidebarCollapse").on('click', function(){
+$("#sidebar").toggleClass('active');
+});
+});
+</script>
+{% endblock %}
